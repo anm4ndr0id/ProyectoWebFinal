@@ -1,0 +1,272 @@
+/* --- RESET Y ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1012; /* Fondo oscuro principal */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.explore-label {
+    font-size: 0.65rem;
+    color: #ffdd40; /* Amarillo CodePen */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav li a {
+    font-size: 0.9rem;
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.main-nav li a:hover {
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-create {
+    background-color: #333642;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-create::after {
+    content: "v"; /* Simula flecha */
+    font-weight: 600;
+    color: #3ebd66;
+    margin-left: 5px;
+}
+
+.icon-search {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: #444857;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-signup-small {
+    background-color: #444857;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 350px;
+    padding-right: 40px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #dadada;
+}
+
+.hero-text h1 strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    color: #9b9b9b;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.cta-container {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-cta {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-green {
+    background-color: #47cf73;
+    color: #0f1012;
+    transition: background 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #3ebd66;
+}
+
+.btn-dark {
+    background-color: #1c1d22;
+    color: #ffffff;
+    border: 1px solid #1c1d22;
+}
+
+.hero-image-container {
+    flex: 1.2;
+    min-width: 400px;
+    position: relative;
+}
+
+.image-caption {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.image-caption span {
+    color: #71bbff; /* Azul claro */
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-top: 1px solid #333; 
+}
+
+/* --- FOOTER BAR --- */
+.feature-bar {
+    display: flex;
+    border-top: 1px solid #25262b;
+    background-color: #131417;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    padding: 25px 10px;
+    border-right: 1px solid #25262b;
+    min-width: 200px;
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.feature-item h3 strong {
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-text p {
+        margin: 0 auto 30px auto;
+    }
+
+    .cta-container {
+        justify-content: center;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-left, .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .main-nav {
+        display: none; 
+    }
+}
